@@ -1,4 +1,4 @@
-from .map import map
+from .map import map, fmap
 from pyramda.private.asserts import assert_iterables_equal, assert_equal
 
 
@@ -18,7 +18,7 @@ class AFunctor(object):
     def __init__(self, value):
         self.value = value
 
-    def map(self, f):
+    def fmap(self, f):
         return AFunctor(f(self.value))
 
     def get_val(self):
@@ -27,7 +27,7 @@ class AFunctor(object):
 
 def no_curry_map_functor_test():
     container = AFunctor(41)
-    with_f_applied = map(add1, container)
+    with_f_applied = fmap(add1, container)
     assert_equal(with_f_applied.get_val(), 42)
 
 
