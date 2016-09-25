@@ -1,4 +1,8 @@
 from pyramda.function.curry import curry
 
 
-map = curry(lambda f, xs: [f(x) for x in xs])
+@curry
+def map(f, xs):
+    if callable(getattr(xs, 'map', None)):
+        return xs.map(f)
+    return (f(x) for x in xs)
