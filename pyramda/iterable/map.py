@@ -7,6 +7,6 @@ def map(f, xs):
         return xs.map(f)
     if callable(getattr(xs, 'fmap', None)):
         return xs.fmap(f)
-    return (f(x) for x in xs)
+    return [f(x) for x in xs]
 
 fmap = map
