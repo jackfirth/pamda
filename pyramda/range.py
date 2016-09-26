@@ -1,6 +1,5 @@
 from pyramda.function.curry import curry
-
-arange = range
+from builtins import range as arange
 
 
 @curry

@@ -8,6 +8,9 @@ from .contains_with import contains_with
 from .drop import drop
 from .filter import filter
 from .find import find
+from .head import head
 from .map import map
+from .nth import nth
 from .reduce import reduce
+from .tail import tail
 from .take import take
