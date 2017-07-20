@@ -7,3 +7,4 @@ from .relation import *
 
 from .getattr import getattr
 from .isinstance import isinstance
+from .range import range
