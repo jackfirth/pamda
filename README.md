@@ -60,11 +60,21 @@ cons :: a -> [a] -> [a]
 contains :: a -> Predicate [a]
 contains_with :: Relation a -> a -> Predicate [a]
 drop :: Number -> [a] -> [a]
+drop_last :: Number -> [a] -> [a]
 filter :: Predicate a -> [a] -> [a]
 find :: Predicate a -> Reduction a
 map :: (a -> b) -> [a] -> [b]
 reduce :: (a -> b -> b) -> a -> [b] -> a
 take :: Number -> [a] -> [a]
+pluck :: k -> [a] -> [b]
+uniq :: [a] -> [b]
+zip_obj :: [a] -> [b] -> [c]
+zip_with :: f -> [a] -> [b] -> [c]
+times :: Number -> [a]
+xprod :: [a] -> [b] -> [c]
+without :: [a] -> [b] -> [c]
+update :: Number -> Number -> [a] -> [b]
+join :: [a] -> [b] -> c
 ```
 
 Logic
@@ -79,6 +89,7 @@ either :: Operation (Predicate a)
 if_else :: Predicate a -> Operation (a -> a)
 not_func :: Boolean -> Boolean
 or_func :: Operation Boolean
+empty :: a -> Boolean
 ```
 
 Math
@@ -110,6 +121,7 @@ lt :: Ord a => Relation a
 lte :: Ord a => Relation a
 max :: Ord a => Reduction a
 min :: Ord a => Reduction a
+identity :: a -> a
 ```
 
 Other
