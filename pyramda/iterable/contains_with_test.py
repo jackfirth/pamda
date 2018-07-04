@@ -6,6 +6,7 @@ def pair_equal(pair1, pair2):
     b1, b2 = pair2
     return a1 == b1 and a2 == b2
 
+
 pairs = [
     (1, 2),
     (2, 1),

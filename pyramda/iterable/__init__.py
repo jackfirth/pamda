@@ -14,3 +14,13 @@ from .take import take
 from .for_each import for_each
 from .flatten import flatten
 from .reject import reject
+from .pluck import pluck
+from .times import times
+from .adjust import adjust
+from .zip_obj import zip_obj
+from .zip_with import zip_with
+from .uniq import uniq
+from .xprod import xprod
+from .without import without
+from .drop_last import drop_last
+from .join import join

@@ -27,4 +27,5 @@ def flatten_until(is_leaf, xs):
 
     return list(_flatten_until(xs))
 
+
 flatten = flatten_until(isinstance(basestring))

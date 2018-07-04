@@ -5,5 +5,5 @@ from .logic import *
 from .math import *
 from .relation import *
 
-from .getattr import getattr
+from .prop import prop
 from .isinstance import isinstance
