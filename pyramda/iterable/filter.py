@@ -1,4 +1,7 @@
 from pyramda.function.curry import curry
+from builtins import filter as uncurried_filter
 
 
-filter = curry(lambda p, xs: [x for x in xs if p(x)])
+@curry
+def filter(p, xs):
+    return list(uncurried_filter(p, xs))

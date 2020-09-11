@@ -1,4 +1,7 @@
 from pyramda.function.curry import curry
+from builtins import map as uncurried_map
 
 
-map = curry(lambda f, xs: [f(x) for x in xs])
+@curry
+def map(f, xs):
+    return list(uncurried_map(f, xs))
